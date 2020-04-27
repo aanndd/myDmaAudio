@@ -178,7 +178,7 @@ void initAudio(int sampleRate=44100)
  
   i2scfg.mode = (i2s_mode_t) (I2S_MODE_MASTER | I2S_MODE_TX |
 			      I2S_MODE_DAC_BUILT_IN);
-  i2scfg.sample_rate = sampleRate/4;
+  i2scfg.sample_rate = sampleRate/2;  // verify 2 or 4;
   i2scfg.bits_per_sample = I2S_BITS_PER_SAMPLE_16BIT;
   i2scfg.communication_format = (i2s_comm_format_t)(I2S_COMM_FORMAT_I2S_MSB);
   i2scfg.channel_format = I2S_CHANNEL_FMT_RIGHT_LEFT;
